@@ -1,33 +1,62 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Link, useLocation } from "react-router-dom";
 
+const links = [
+  {
+    id: 1,
+    text: "HOME",
+    url: "#home",
+  },
+  {
+    id: 1,
+    text: "PRODUCTS",
+    url: "#products",
+  },
+  {
+    id: 1,
+    text: "LOCATIONS",
+    url: "#locations",
+  },
+];
+
 export default function Navigation() {
   const location = useLocation();
   const path = location.pathname === "/";
 
-  const replaceBtn = () => {};
+  const handleClick = (e) => {
+    e.preventDefault();
+    const target = e.target.getAttribute("href");
+    const location = document.querySelector(target).offsetTop;
+    window.scrollTo({
+      left: 0,
+      top: location - 64,
+    });
+  };
 
   return (
     <>
       {path ? (
         <div
           className="absolute bottom-44 flex md:flex-row 
-        justify-evenly w-full m-auto items-center flex-col sm:text-lg text-3xl"
+        justify-evenly w-full m-auto items-center flex-col sm:text-lg 
+        text-3xl transition transition-all ease-in-out duration-1000"
         >
-          <Link to="/Home">Home</Link>
-          <Link to="/Products">Products</Link>
-          <Link to="/Locations">Locations</Link>
+          <Link to="/Home">START HERE</Link>
         </div>
       ) : (
-        <div className="flex justify-evenly w-4/5 mt-10 m-auto">
-          <Link to="/">
+        <div className="sticky top-0 flex justify-evenly w-4/5 mt-10 m-auto transition-all ease-in-out duration-1000 p-5">
+          <a href="/">
             {!path && (
               <img className="w-12 text-kawi" src="/assets/kawilogo.png" />
             )}
-          </Link>
-          <Link to="/Home">Home</Link>
-          <Link to="/Products">Products</Link>
-          <Link to="/Locations">Locations</Link>
+          </a>
+          {links.map((link, idx) => {
+            return (
+              <a key={idx} onClick={handleClick} href={link.url} key={link.id}>
+                {link.text}
+              </a>
+            );
+          })}
         </div>
       )}
     </>

@@ -7,7 +7,7 @@ module.exports = {
         "spin-slow": "spin 3s linear infinite",
       },
       colors: {
-        kawi: "#9BFF4F",
+        kawi: "rgb(155, 255, 79, .8)",
       },
     },
   },
