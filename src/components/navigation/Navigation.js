@@ -8,14 +8,9 @@ const links = [
     url: "#home",
   },
   {
-    id: 1,
+    id: 2,
     text: "PRODUCTS",
     url: "#products",
-  },
-  {
-    id: 1,
-    text: "LOCATIONS",
-    url: "#locations",
   },
 ];
 
@@ -44,7 +39,7 @@ export default function Navigation() {
           <Link to="/Home">START HERE</Link>
         </div>
       ) : (
-        <div className="sticky top-0 flex justify-evenly w-4/5 mt-10 m-auto transition-all ease-in-out duration-1000 p-5">
+        <div className="sticky top-0 flex flex-col md:flex-row items-center w-full justify-evenly w-4/5 mt-10 m-auto transition-all ease-in-out duration-1000 p-5">
           <a href="/">
             {!path && (
               <img className="w-12 text-kawi" src="/assets/kawilogo.png" />

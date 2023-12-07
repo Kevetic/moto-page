@@ -15,9 +15,6 @@ export default function HomePage() {
           <Products />
         </h1>
       </section>
-      <section>
-        <h1 id="locations">LOCATIONS</h1>
-      </section>
     </>
   );
 }

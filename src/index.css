@@ -26,7 +26,16 @@ section {
   height: 100vh;
 }
 
+.productPage {
+  background-image: url("/public/assets/1080h2r.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+
 @layer components {
+  .productPage span {
+    @apply text-kawi animate-pulse;
+  }
   a {
     @apply py-2 px-4 text-black font-semibold rounded-lg shadow-md hover:bg-kawi focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75;
   }

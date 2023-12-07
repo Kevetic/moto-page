@@ -4,6 +4,8 @@ export default function Products() {
   const [data, setData] = useState([]);
   const [current, setCurrent] = useState([]);
 
+  console.log(current);
+
   useEffect(() => {
     async function fetchExercises() {
       const response = await fetch(
@@ -25,11 +27,10 @@ export default function Products() {
     const dupeCheck = data.filter((selected) => e.target.id === selected.model);
     const firstItem = dupeCheck.length > 0 ? dupeCheck[0] : null;
     setCurrent([firstItem]);
-    console.log(firstItem);
   };
 
   return (
-    <div className="flex mt-10">
+    <div className="flex">
       <div className="w-1/5">
         {data.map((x, i) => {
           return (
@@ -44,22 +45,40 @@ export default function Products() {
           );
         })}
       </div>
-      <div className="w-4/5 text-center">
-        <div>Product Information</div>
-        <div>
-          {current.map((x) => {
-            return (
-              <>
-                <div>Model:{x.model}</div>
-                <div>Make: {x.make}</div>
-                <div>Engine: {x.engine}</div>
-                <div>Horsepower:{x.power}</div>
-                <div>Seat Heigt:{x.seat_height}</div>
-                <div>Torque:{x.torque}</div>
-              </>
-            );
-          })}
-        </div>
+      <div className="w-4/5 text-center bg-gray-400 rounded-2lg productPage text-white">
+        {current.length == 0 ? (
+          <h1 className="text-4xl relative top-40">Select a Model</h1>
+        ) : (
+          <div>
+            {current.map((x) => {
+              return (
+                <div className="grid grid-rows-4 grid-flow-col gap-2 mt-60 text-lg">
+                  <div className="flex-col flex">
+                    Model:<span>{x.model}</span>
+                  </div>
+                  <div className="flex-col flex">
+                    Make: <span>{x.make}</span>
+                  </div>
+                  <div className="flex-col flex">
+                    Engine: <span>{x.engine}</span>
+                  </div>
+                  <div className="flex-col flex">
+                    Horsepower:<span>{x.power}</span>
+                  </div>
+                  <div className="flex-col flex">
+                    Seat Heigt:<span>{x.seat_height}</span>
+                  </div>
+                  <div className="flex-col flex">
+                    Torque:<span>{x.torque}</span>
+                  </div>
+                  <div className="flex-col flex">
+                    Type:<span>{x.type}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );
