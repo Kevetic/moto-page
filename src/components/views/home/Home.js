@@ -1,4 +1,5 @@
 import React from "react";
+import TRACK from "../../../assets/TRACK.png";
 
 export default function Home() {
   return (
@@ -7,10 +8,7 @@ export default function Home() {
         <h1 className="text-kawi">Kawasaki</h1> Racing
       </div>
       <div className="flex-col flex md:flex-row bg-gray-400 mt-10 w-4/5 m-auto rounded-lg p-5">
-        <img
-          className="w-2/5 m-auto rounded-2xl shadow-2xl p-2"
-          src="/assets/track.png"
-        />
+        <img className="w-2/5 m-auto rounded-2xl shadow-2xl p-2" src={TRACK} />
         <div className="flex">
           <p className="text-xs w-4/5 m-auto p-2 sm:text-lg rounded-2xl shadow-2xl">
             <span className="text-kawi">Kawasaki</span> Motorsports embodies a

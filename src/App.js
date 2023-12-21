@@ -2,7 +2,6 @@ import Navigation from "./components/navigation/Navigation";
 import LandingPage from "./components/landingPage/LandingPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./components/homePage/HomePage";
-import { useEffect, useState } from "react";
 
 function App() {
   return (

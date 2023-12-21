@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Link, useLocation } from "react-router-dom";
+import KAWI from "../../assets/KAWI.png";
 
 const links = [
   {
@@ -21,7 +22,7 @@ export default function Navigation() {
   const handleClick = (e) => {
     e.preventDefault();
     const target = e.target.getAttribute("href");
-    const location = document.querySelector(target).offsetTop;
+    const location = document.querySelector(target)?.offsetTop;
     window.scrollTo({
       left: 0,
       top: location - 64,
@@ -41,9 +42,7 @@ export default function Navigation() {
       ) : (
         <div className="sticky top-0 flex flex-col md:flex-row items-center w-full justify-evenly w-4/5 mt-10 m-auto transition-all ease-in-out duration-1000 p-5">
           <a href="/">
-            {!path && (
-              <img className="w-12 text-kawi" src="/assets/kawilogo.png" />
-            )}
+            {!path && <img className="w-12 text-kawi" src={KAWI} />}
           </a>
           {links.map((link, idx) => {
             return (

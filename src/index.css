@@ -27,7 +27,7 @@ section {
 }
 
 .productPage {
-  background-image: url("/public/assets/1080h2r.jpg");
+  background-image: url("./assets/h2r.png");
   background-size: cover;
   border-radius: 10px;
 }
