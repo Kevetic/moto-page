@@ -4,8 +4,6 @@ export default function Products() {
   const [data, setData] = useState([]);
   const [current, setCurrent] = useState([]);
 
-  console.log(current);
-
   useEffect(() => {
     async function fetchExercises() {
       const response = await fetch(

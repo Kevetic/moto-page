@@ -17,7 +17,7 @@ const links = [
 
 export default function Navigation() {
   const location = useLocation();
-  const path = location.pathname === "/landing";
+  const path = location.pathname === "/";
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ export default function Navigation() {
         </div>
       ) : (
         <div className="sticky top-0 flex flex-col md:flex-row items-center w-full justify-evenly w-4/5 mt-10 m-auto transition-all ease-in-out duration-1000 p-5">
-          <a href="/landing">
+          <a href="/">
             {!path && <img className="w-12 text-kawi" src={KAWI} />}
           </a>
           {links.map((link, idx) => {
