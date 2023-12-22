@@ -46,7 +46,7 @@ export default function Navigation() {
           </a>
           {links.map((link, idx) => {
             return (
-              <a key={idx} onClick={handleClick} href={link.url} key={link.id}>
+              <a key={idx} onClick={handleClick} href={link.url} key={idx}>
                 {link.text}
               </a>
             );
