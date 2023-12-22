@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import KAWI from "../../assets/KAWI.png";
 
 const links = [
@@ -17,7 +17,7 @@ const links = [
 
 export default function Navigation() {
   const location = useLocation();
-  const path = location.pathname === "/";
+  const path = location.pathname === "/Landing";
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -41,9 +41,9 @@ export default function Navigation() {
         </div>
       ) : (
         <div className="sticky top-0 flex flex-col md:flex-row items-center w-full justify-evenly w-4/5 mt-10 m-auto transition-all ease-in-out duration-1000 p-5">
-          <a href="/">
+          <Link to="/Landing">
             {!path && <img className="w-12 text-kawi" src={KAWI} />}
-          </a>
+          </Link>
           {links.map((link, idx) => {
             return (
               <a key={idx} onClick={handleClick} href={link.url} key={idx}>
