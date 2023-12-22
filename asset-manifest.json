@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/moto-page/static/css/main.d92b75ab.css",
-    "main.js": "/moto-page/static/js/main.b8b10b4e.js",
+    "main.js": "/moto-page/static/js/main.982b502e.js",
     "static/js/787.3ec4b619.chunk.js": "/moto-page/static/js/787.3ec4b619.chunk.js",
     "static/media/TRACK.png": "/moto-page/static/media/TRACK.722bc0d03fa9573c7592.png",
     "static/media/h2r.png": "/moto-page/static/media/h2r.f77ba93f83c3cb377f79.png",
     "static/media/KAWI.png": "/moto-page/static/media/KAWI.53383da7ea61e3aaf53d.png",
     "index.html": "/moto-page/index.html",
     "main.d92b75ab.css.map": "/moto-page/static/css/main.d92b75ab.css.map",
-    "main.b8b10b4e.js.map": "/moto-page/static/js/main.b8b10b4e.js.map",
+    "main.982b502e.js.map": "/moto-page/static/js/main.982b502e.js.map",
     "787.3ec4b619.chunk.js.map": "/moto-page/static/js/787.3ec4b619.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d92b75ab.css",
-    "static/js/main.b8b10b4e.js"
+    "static/js/main.982b502e.js"
   ]
 }
